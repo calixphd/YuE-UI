@@ -1452,8 +1452,11 @@ class AppMain:
         if token:
             token.stop_generation(False, "Cancelled")
 
+    # def launch(self):
+    #     self._interface.launch(server_name=self._server_name, server_port=self._server_port, allowed_paths=self._allowed_paths)
     def launch(self):
-        self._interface.launch(server_name=self._server_name, server_port=self._server_port, allowed_paths=self._allowed_paths)
+        self._interface.launch(server_name=self._server_name, server_port=self._server_port,   share=True, allowed_paths=self._allowed_paths )
+
 
 if __name__ == "__main__":
     parser = ArgumentParser()
